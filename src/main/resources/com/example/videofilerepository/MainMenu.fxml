@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="686.0" prefWidth="1188.0" style="-fx-background-color: #202020;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.videofilerepository.Controller">
+   <children>
+      <MenuBar layoutY="-1.0" opacity="0.7" prefHeight="25.0" prefWidth="1188.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="menuRead" mnemonicParsing="false" onAction="#onReadSegmentInFileMenuClick" text="Read    Ctrl+R" />
+                  <MenuItem fx:id="menuWrite" mnemonicParsing="false" onAction="#onWriteSegmentInFileMenuClick" text="Write    Сtrl+W" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem fx:id="AddElemMenuBut" mnemonicParsing="false" onAction="#onAddMenuButtonClick" text="Add Element" />
+                  <MenuItem fx:id="DeleteElemMenuBut" mnemonicParsing="false" onAction="#onDeleteMenuButtonClick" text="Delete Element" />
+                  <MenuItem fx:id="FindElemMenuBut" mnemonicParsing="false" onAction="#onFindMenuButtonClick" text="Find Element" />
+                  <MenuItem fx:id="GroupElemMenuBut" mnemonicParsing="false" onAction="#onGroupMenuButtonClick" text="Group by Codecs" />
+                  <MenuItem fx:id="FindLongesElemMenuBut" mnemonicParsing="false" onAction="#onLongestMenuButtonClick" text="Find Longest Videos" />
+                  <MenuItem fx:id="findExtremumMenuBut" mnemonicParsing="false" onAction="#onExtremumButtonClick" text="Find max/min size" />
+                  <MenuItem fx:id="sortByNameMenuBut" mnemonicParsing="false" onAction="#onSortByNameButtonClick" text="Sort by Name" />
+                  <MenuItem fx:id="consoleDisplayMenuBut" mnemonicParsing="false" onAction="#onConsoleDisplayButtonClick" text="Console Display" />
+                  <MenuItem fx:id="consoleInputMenuBut" mnemonicParsing="false" onAction="#onConsoleInputButtonClick" text="Console Input" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="View">
+            <items>
+                  <MenuItem fx:id="clearMenuBut1" mnemonicParsing="false" onAction="#onClearButtonClick" text="Clear" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Pane layoutX="11.0" layoutY="82.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="592.0" prefWidth="705.0" style="-fx-background-color: #404040; -fx-background-radius: 10px;">
+         <children>
+            <TableView fx:id="Table" layoutX="14.0" layoutY="14.0" prefHeight="567.0" prefWidth="679.0">
+              <columns>
+                <TableColumn fx:id="NameColumn" prefWidth="75.0" text="Name" />
+                <TableColumn fx:id="PathColumn" prefWidth="75.0" text="Path" />
+                  <TableColumn fx:id="FormatColumn" prefWidth="75.0" text="Format" />
+                  <TableColumn fx:id="DurationColumn" prefWidth="75.0" text="Duration" />
+                  <TableColumn fx:id="VCodecColumn" prefWidth="75.0" text="Video Codec" />
+                  <TableColumn fx:id="ACodecColumn" prefWidth="75.0" text="Audio Codec" />
+                  <TableColumn fx:id="SubtitlesColumn" prefWidth="75.0" text="Subtitles" />
+                  <TableColumn fx:id="SizeColumn" prefWidth="75.0" text="Size" />
+                  <TableColumn fx:id="PlayerColumn" prefWidth="75.0" text="Player" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+      <Pane layoutX="729.0" layoutY="387.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="287.0" prefWidth="444.0" style="-fx-background-color: #404040; -fx-background-radius: 10px;">
+         <children>
+            <TableView fx:id="ContextTable" layoutX="14.0" layoutY="14.0" prefHeight="262.0" prefWidth="416.0">
+               <columns>
+                  <TableColumn fx:id="NameColumn1" prefWidth="75.0" text="Name" />
+                  <TableColumn fx:id="PathColumn1" prefWidth="75.0" text="Path" />
+                  <TableColumn fx:id="FormatColumn1" prefWidth="75.0" text="Format" />
+                  <TableColumn fx:id="DurationColumn1" prefWidth="75.0" text="Duration" />
+                  <TableColumn fx:id="VCodecColumn1" prefWidth="75.0" text="Video Codec" />
+                  <TableColumn fx:id="ACodecColumn1" prefWidth="75.0" text="Audio Codec" />
+                  <TableColumn fx:id="SubtitlesColumn1" prefWidth="75.0" text="Subtitles" />
+                  <TableColumn fx:id="SizeColumn1" prefWidth="75.0" text="Size" />
+                  <TableColumn fx:id="PlayerColumn1" prefWidth="75.0" text="Player" />
+               </columns></TableView>
+         </children></Pane>
+      <Pane layoutX="11.0" layoutY="38.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="705.0" style="-fx-background-color: #c5c7c4; -fx-background-radius: 10px;">
+         <children>
+            <Label alignment="CENTER" layoutX="300.0" layoutY="7.0" prefHeight="20.0" prefWidth="105.0" text="All Files">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Pane layoutX="729.0" layoutY="342.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="444.0" style="-fx-background-color: #c5c7c4; -fx-background-radius: 10px;">
+         <children>
+            <Label alignment="CENTER" layoutX="170.0" layoutY="7.0" prefHeight="20.0" prefWidth="105.0" text="Result">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Group layoutX="729.0" layoutY="38.0">
+         <children>
+            <Pane layoutX="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="444.0" style="-fx-background-color: #c5c7c4; -fx-background-radius: 10px;">
+               <children>
+                  <Label fx:id="controlLabel" alignment="CENTER" layoutX="130.0" layoutY="7.0" prefHeight="20.0" prefWidth="184.0" text="Control Panel">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="startControlPanel" layoutX="1.0" layoutY="44.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="249.0" prefWidth="444.0" style="-fx-background-color: #404040; -fx-background-radius: 10px;" visible="false" />
+            <Pane fx:id="findControlPanel" layoutX="1.0" layoutY="44.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="249.0" prefWidth="444.0" style="-fx-background-color: #404040; -fx-background-radius: 10px;">
+               <children>
+                  <Label alignment="CENTER" layoutX="85.0" layoutY="17.0" prefHeight="20.0" prefWidth="119.0" text="Choosen format:" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="findFormatTF" layoutX="209.0" layoutY="14.0" style="-fx-background-color: #d2d2d2; -fx-border-radius: 5em; -fx-background-radius: 5em;" />
+                  <Label alignment="CENTER" layoutX="85.0" layoutY="51.0" prefHeight="20.0" prefWidth="119.0" text="Data for finding:" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="findDataTF" layoutX="209.0" layoutY="49.0" style="-fx-background-color: #d2d2d2; -fx-border-radius: 5em; -fx-background-radius: 5em;" />
+                  <Label alignment="CENTER" layoutX="70.0" layoutY="115.0" prefHeight="20.0" prefWidth="184.0" text="Number of finded elements" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="findNumberLabel" alignment="CENTER" layoutX="254.0" layoutY="115.0" prefHeight="20.0" prefWidth="59.0" text="..." textFill="#acacac">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="groupControlPanel" layoutX="1.0" layoutY="44.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="249.0" prefWidth="444.0" style="-fx-background-color: #404040; -fx-background-radius: 10px;" visible="false">
+               <children>
+                  <Label alignment="CENTER" layoutX="72.0" layoutY="23.0" prefHeight="20.0" prefWidth="132.0" text="Choosen codec type:" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="groupFormatTF" layoutX="209.0" layoutY="20.0" style="-fx-background-color: #d2d2d2; -fx-border-radius: 5em; -fx-background-radius: 5em;" />
+               </children>
+            </Pane>
+            <Pane fx:id="findLongestControlPanel" layoutX="1.0" layoutY="44.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="249.0" prefWidth="444.0" style="-fx-background-color: #404040; -fx-background-radius: 10px;" visible="false">
+               <children>
+                  <Label alignment="CENTER" layoutX="85.0" layoutY="17.0" prefHeight="20.0" prefWidth="119.0" text="Subtitles" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="85.0" layoutY="51.0" prefHeight="20.0" prefWidth="119.0" text="Longest duration" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="findLongestDurationTF" layoutX="209.0" layoutY="49.0" style="-fx-background-color: #d2d2d2; -fx-border-radius: 5em; -fx-background-radius: 5em;" />
+                  <Label alignment="CENTER" layoutX="70.0" layoutY="115.0" prefHeight="20.0" prefWidth="184.0" text="Number of elements" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="findLongestNumberLabel" alignment="CENTER" layoutX="254.0" layoutY="115.0" prefHeight="20.0" prefWidth="59.0" text="..." textFill="#acacac">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="findLongestSubtitlesTF" layoutX="209.0" layoutY="14.0" style="-fx-background-color: #d2d2d2; -fx-border-radius: 5em; -fx-background-radius: 5em;" />
+               </children>
+            </Pane>
+            <Pane fx:id="extremumControlPanel" layoutX="1.0" layoutY="44.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="249.0" prefWidth="444.0" style="-fx-background-color: #404040; -fx-background-radius: 10px;" visible="false">
+               <children>
+                  <Label alignment="CENTER" layoutX="85.0" layoutY="17.0" prefHeight="20.0" prefWidth="119.0" text="Format" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="85.0" layoutY="51.0" prefHeight="20.0" prefWidth="119.0" text="Max size" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="maxFormatTF" layoutX="209.0" layoutY="49.0" style="-fx-background-color: #d2d2d2; -fx-border-radius: 5em; -fx-background-radius: 5em;" />
+                  <TextField fx:id="extremumFormatTF" layoutX="209.0" layoutY="14.0" style="-fx-background-color: #d2d2d2; -fx-border-radius: 5em; -fx-background-radius: 5em;" />
+                  <Label alignment="CENTER" layoutX="85.0" layoutY="86.0" prefHeight="20.0" prefWidth="119.0" text="Min size" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="minFormatTF" layoutX="209.0" layoutY="84.0" style="-fx-background-color: #d2d2d2; -fx-border-radius: 5em; -fx-background-radius: 5em;" />
+               </children>
+            </Pane>
+            <Pane fx:id="sortControlPanel" layoutX="1.0" layoutY="44.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="249.0" prefWidth="444.0" style="-fx-background-color: #404040; -fx-background-radius: 10px;" visible="false">
+               <children>
+                  <Label alignment="CENTER" layoutX="72.0" layoutY="23.0" prefHeight="20.0" prefWidth="132.0" text="Subtitles" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="sortSubtitlesTF" layoutX="209.0" layoutY="20.0" style="-fx-background-color: #d2d2d2; -fx-border-radius: 5em; -fx-background-radius: 5em;" />
+                  <Label alignment="CENTER" layoutX="72.0" layoutY="62.0" prefHeight="20.0" prefWidth="132.0" text="Time" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="timeSortTF" layoutX="209.0" layoutY="59.0" style="-fx-background-color: #d2d2d2; -fx-border-radius: 5em; -fx-background-radius: 5em;" />
+               </children>
+            </Pane>
+         </children>
+      </Group>
+      <Button fx:id="writeButton" layoutX="885.0" layoutY="279.0" mnemonicParsing="false" onAction="#onContextWriteFindButtonClick" prefHeight="25.0" prefWidth="132.0" style="-fx-background-color: #d2d2d2; -fx-border-radius: 5em; -fx-background-radius: 5em;" text="Write results to file" />
+   </children>
+</Pane>

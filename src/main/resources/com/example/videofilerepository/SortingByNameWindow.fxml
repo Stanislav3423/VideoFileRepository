@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="168.0" prefWidth="504.0" style="-fx-background-color: #202020;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.videofilerepository.SortingByNameController">
+   <children>
+      <Pane layoutX="11.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="81.0" prefWidth="481.0" style="-fx-background-color: #404040; -fx-background-radius: 10px;">
+         <children>
+            <Label fx:id="elementLabel" alignment="CENTER" layoutX="126.0" layoutY="9.0" prefHeight="25.0" prefWidth="228.0" text="Sorting" textFill="WHITE" />
+            <CheckBox fx:id="subtitlesCheckBox" layoutX="290.0" layoutY="45.0" mnemonicParsing="false" />
+            <Label alignment="CENTER" layoutX="174.0" layoutY="41.0" prefHeight="25.0" prefWidth="103.0" text="Subtitles" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Pane layoutX="11.0" layoutY="107.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="49.0" prefWidth="481.0" style="-fx-background-color: #404040; -fx-background-radius: 10px;">
+         <children>
+            <Button fx:id="groupButton" layoutX="143.0" layoutY="12.0" mnemonicParsing="false" onAction="#onGroupButtonClick" prefHeight="25.0" prefWidth="103.0" style="-fx-background-color: #eda678; -fx-border-radius: 5em; -fx-background-radius: 5em;" text="Create group" />
+            <Button fx:id="sortButton" layoutX="259.0" layoutY="12.0" mnemonicParsing="false" onAction="#onSortButtonClick" prefHeight="25.0" prefWidth="79.0" style="-fx-background-color: #d2d2d2; -fx-border-radius: 5em; -fx-background-radius: 5em;" text="Sort" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

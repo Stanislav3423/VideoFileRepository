@@ -1,0 +1,13 @@
+Video1 D:/dfj MOV 345.0 H.264/AVC G.711 true 123.0 GOM.Player
+Hidk D:/dsfg/skfgm MP4 462.0 H.265/HEVC G.711 true 123.0 PotPlayer
+Hidk1 D:/dsfg/skfgm MP4 462.0 H.265/HEVC G.711 true 123.0 PotPlayer
+Sdfbb C:/dsfg/gfkjjn FLV 39.0 H.265/HEVC AAC true 1232.0 PotPlayer
+Film D:/sdf WMV 23.0 AV1 FLAC false 23.0 Kodi
+VideoForeast D:/dfqap/dsfx WMV 11.0 H.264/AVC FLAC false 123.0 PotPlayer
+VideoForeast1 D:/dfqap/dsfx WMV 11.0 H.264/AVC FLAC false 123.0 PotPlayer
+ueir C:/dgs MOV 29.0 H.266/VVC FLAC true 32.0 VLC.MediaPlayer
+Opkq D:/sda MOV 11.0 H.265/HEVC G.711 true 22.0 PotPlayer
+Dfnm D:/sdf FLV 112.0 VP9 FLAC true 22.0 PotPlayer
+Dfnm1 D:/sdf FLV 112.0 VP9 FLAC true 22.0 PotPlayer
+Dfnm2 D:/sdf FLV 112.0 VP9 FLAC true 22.0 PotPlayer
+Sd22 D:/dsfq FLV 222.0 H.265/HEVC AMR true 12.0 GOM.Player

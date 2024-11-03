@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="509.0" prefWidth="504.0" style="-fx-background-color: #202020;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.videofilerepository.AddWindowController">
+   <children>
+      <Pane fx:id="StartControlPanel1" layoutX="11.0" layoutY="12.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="421.0" prefWidth="481.0" style="-fx-background-color: #404040; -fx-background-radius: 10px;">
+         <children>
+            <Label fx:id="elementLabel" alignment="CENTER" layoutX="126.0" layoutY="9.0" prefHeight="25.0" prefWidth="228.0" text="Adding" textFill="WHITE" />
+            <Group layoutX="26.0" layoutY="43.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="44.0" prefHeight="25.0" prefWidth="148.0" text="Enter name" textFill="WHITE" />
+                  <TextField fx:id="nameTextField" layoutX="238.0" style="-fx-background-color: #d2d2d2; -fx-border-radius: 5em; -fx-background-radius: 5em;" />
+               </children>
+            </Group>
+            <Group layoutX="26.0" layoutY="89.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="44.0" prefHeight="25.0" prefWidth="148.0" text="Enter path" textFill="WHITE" />
+                  <TextField fx:id="pathTextField" layoutX="238.0" style="-fx-background-color: #d2d2d2; -fx-border-radius: 5em; -fx-background-radius: 5em;" />
+               </children>
+            </Group>
+            <Group layoutX="25.0" layoutY="135.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="44.0" prefHeight="25.0" prefWidth="148.0" text="Enter duration" textFill="WHITE" />
+                  <TextField fx:id="durationTextField" layoutX="238.0" style="-fx-background-color: #d2d2d2; -fx-border-radius: 5em; -fx-background-radius: 5em;" />
+               </children>
+            </Group>
+            <Group layoutX="68.0" layoutY="214.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="-1.0" layoutY="2.0" prefHeight="25.0" prefWidth="146.0" text="Choose video codec" textFill="WHITE" />
+                  <ChoiceBox fx:id="videoCodecsChoice" layoutX="194.0" layoutY="2.0" prefWidth="150.0" />
+               </children>
+            </Group>
+            <Group layoutX="68.0" layoutY="252.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="-1.0" layoutY="2.0" prefHeight="25.0" prefWidth="146.0" text="Choose audio codec" textFill="WHITE" />
+                  <ChoiceBox fx:id="audioCodecsChoice" layoutX="194.0" layoutY="2.0" prefWidth="150.0" />
+               </children>
+            </Group>
+            <Group layoutX="83.0" layoutY="294.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="-3.0" layoutY="-4.0" prefHeight="25.0" prefWidth="128.0" text="Availability of subtitles" textFill="WHITE" />
+                  <CheckBox fx:id="subtitleCheckBox" layoutX="249.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="22.0" />
+               </children>
+            </Group>
+            <Group layoutX="26.0" layoutY="327.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="44.0" prefHeight="25.0" prefWidth="148.0" text="Enter size" textFill="WHITE" />
+                  <TextField fx:id="sizeTextField" layoutX="235.0" style="-fx-background-color: #d2d2d2; -fx-border-radius: 5em; -fx-background-radius: 5em;" />
+               </children>
+            </Group>
+            <Group layoutX="67.0" layoutY="371.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="-1.0" layoutY="2.0" prefHeight="25.0" prefWidth="146.0" text="Choose video player" textFill="WHITE" />
+                  <ChoiceBox fx:id="playersChoice" layoutX="194.0" layoutY="1.0" prefWidth="150.0" />
+               </children>
+            </Group>
+            <Group layoutX="69.0" layoutY="179.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="-1.0" layoutY="2.0" prefHeight="25.0" prefWidth="146.0" text="Choose format" textFill="WHITE" />
+                  <ChoiceBox fx:id="formatsChoice" layoutX="194.0" layoutY="1.0" prefWidth="150.0" />
+               </children>
+            </Group>
+            <Label fx:id="numberTF" alignment="TOP_LEFT" layoutX="263.0" layoutY="114.0" prefHeight="17.0" prefWidth="155.0" text="String: D:/.../.../..." textFill="#acacac" />
+            <Label fx:id="numberTF1" alignment="TOP_LEFT" layoutX="263.0" layoutY="160.0" prefHeight="17.0" prefWidth="155.0" text="Number &gt;0 and &lt;999999" textFill="#acacac" />
+            <Label fx:id="numberTF11" alignment="TOP_LEFT" layoutX="263.0" layoutY="352.0" prefHeight="17.0" prefWidth="155.0" text="Number &gt;0 and &lt;999999" textFill="#acacac" />
+            <Label fx:id="numberTF2" alignment="TOP_LEFT" layoutX="263.0" layoutY="68.0" prefHeight="17.0" prefWidth="155.0" text="String: Latins letters" textFill="#acacac" />
+         </children>
+      </Pane>
+      <Pane fx:id="StartControlPanel2" layoutX="11.0" layoutY="445.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="49.0" prefWidth="481.0" style="-fx-background-color: #404040; -fx-background-radius: 10px;">
+         <children>
+            <Button fx:id="addButton" layoutX="157.0" layoutY="12.0" mnemonicParsing="false" onAction="#onButtonAddClick" prefHeight="25.0" prefWidth="79.0" style="-fx-background-color: #eda678; -fx-border-radius: 5em; -fx-background-radius: 5em;" text="Add" />
+            <Button fx:id="duplicateButton" layoutX="246.0" layoutY="12.0" mnemonicParsing="false" onAction="#onDuplicateButtonClick" opacity="0.5" prefHeight="25.0" prefWidth="79.0" style="-fx-background-color: #d2d2d2; -fx-border-radius: 5em; -fx-background-radius: 5em;" text="Duplicate" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
